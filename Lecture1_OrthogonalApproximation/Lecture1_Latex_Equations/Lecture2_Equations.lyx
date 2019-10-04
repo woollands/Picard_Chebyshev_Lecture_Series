@@ -1,0 +1,604 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass report
+\begin_preamble
+\usepackage{graphicx}
+%\usepackage{lmodern}
+
+\bibpunct{(}{)}{;}{a}{}{,}
+
+\hsize=165true mm\vsize=265true mm\oddsidemargin=0pt
+\textwidth=165truemm\textheight=250truemm
+\topmargin=5truemm \voffset=-23true mm\hoffset=4truemm
+\parskip = 3pt
+\def\singlesided{\evensidemargin=0pt}
+\def\doublesided{\evensidemargin=-15truemm}
+\doublesided
+
+\ifx\pdfximage\UnDeFiNeD
+\ifx\pdfimage\UnDeFiNeD\message{Postcript output - importing eps logo}
+%\def\UClogo{\includegraphics[width=45truemm]{UC.png}}
+\def\centerimage#1{\centerline{#1}}
+\else\message{PDF output - importing pdf logo}
+%\def\UClogo{\includegraphics[width=45truemm]{UC.png}}
+\fi
+\else\message{PDF output - importing pdf logo}
+%\def\UClogo{\includegraphics[width=45truemm]{UC.png}}
+\fi
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language british
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Function Approximation
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\ddot{\textit{\textbf{x}}}=-\frac{\mu}{r^{3}}\textit{\textbf{r}}+\textit{\textbf{a}}_{d}\left(\textit{\textbf{r}},\textit{\textbf{v}},t\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $f(\xi)\approx\overset{N}{\underset{\alpha=0}{\sum}}a_{\alpha}\phi_{\alpha}(\xi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Approximation & Error
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $f(\xi)\approx\overset{N}{\underset{\alpha=0}{\sum}}a_{\alpha}\phi_{\alpha}(\xi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $r_{j}=f(\xi_{j})-\overset{N}{\underset{\alpha=0}{\sum}}a_{\alpha}\phi_{\alpha}(\xi_{j});\;j=0,1,...,M.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\left\{ \xi_{0},\xi_{1},...,\xi_{M};M\geq N\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Vector Matrix & Least Squares
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\textit{\textbf{r}}=\textit{\textbf{f}}-\Phi\textit{\textbf{a}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\textit{\textbf{f}}=\left[\begin{array}{c}
+f(\xi_{0})\\
+f(\xi_{1})\\
+\vdots\\
+f(\xi_{M})
+\end{array}\right],\;\Phi=\left[\begin{array}{cccc}
+\phi_{0}(\xi_{0}) & \phi_{1}(\xi_{0}) & \cdots & \phi_{N}(\xi_{0})\\
+\phi_{0}(\xi_{1}) & \phi_{1}(\xi_{1}) & \cdots & \phi_{N}(\xi_{1})\\
+\vdots & \vdots & \ddots & \vdots\\
+\phi_{0}(\xi_{M}) & \phi_{1}(\xi_{M}) & \cdots & \phi_{N}(\xi_{M})
+\end{array}\right],\;\textit{\textbf{a}}=\left[\begin{array}{c}
+a_{0}\\
+a_{1}\\
+\vdots\\
+a_{N}
+\end{array}\right].$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Least Squares Approximation
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $A\boldsymbol{\boldsymbol{x}}=\boldsymbol{\boldsymbol{b}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\boldsymbol{e}=\boldsymbol{\boldsymbol{b}}-A\boldsymbol{\boldsymbol{x}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $J={\rm min}\frac{\boldsymbol{e}^{T}\boldsymbol{e}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $J=\frac{1}{2}\boldsymbol{e}^{T}\boldsymbol{e}=\frac{1}{2}\left(\boldsymbol{b}-A\boldsymbol{x}\right)^{T}\left(\boldsymbol{b}-A\boldsymbol{x}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $J=\frac{1}{2}\boldsymbol{b}^{T}\boldsymbol{b}-\boldsymbol{b}^{T}A\boldsymbol{x}+\frac{1}{2}\boldsymbol{x}^{T}A^{T}A\boldsymbol{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\frac{\partial J}{\partial x}=0-A^{T}\boldsymbol{b}+A^{T}A\boldsymbol{x}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $A^{T}A\boldsymbol{x}=A^{T}\boldsymbol{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\boldsymbol{x}=\left(A^{T}A\right)^{-1}A^{T}\boldsymbol{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\boldsymbol{x}=\left(A^{T}WA\right)^{-1}A^{T}W\boldsymbol{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\textit{\textbf{a}}=\left(\Phi^{T}W\Phi\right)^{-1}\Phi^{T}W\textit{\textbf{f}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Chebyshev Polynomials
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{0}(\tau)=1,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{1}(\tau)=\tau,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{k+1}(\tau)=2\tau T_{k}(\tau)-T_{k-1}(\tau).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{k}(\tau)=\cos(k\arccos(\tau)).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\tau\in[-1,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{df}{d\tau}=\frac{df}{dt}\frac{dt}{d\tau}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{dt}{d\tau}=(t_{f}-t_{0})/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Matrix Inverse
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $a_{\alpha}=\frac{\langle\phi_{\alpha}(\xi),f(\xi)\rangle}{\langle\phi_{\alpha}(\xi),\phi_{\alpha}(\xi)\rangle}\equiv\frac{\overset{M}{\underset{j=0}{\sum}}W_{j}\phi_{\alpha}(\xi_{j})f(\xi_{j})}{\overset{M}{\underset{j=0}{\sum}}W_{j}\phi_{\alpha}^{2}(\xi_{j})}\equiv\frac{1}{c_{\alpha}}\overset{M}{\underset{j=0}{\sum}}W_{j}\phi_{\alpha}(\xi_{j})f(\xi_{j}),\:\mathrm{for}\:\alpha\:=0,1,2,...,N.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\xi_{j}=-\mathrm{cos}(j\pi/M),\;j=0,1,2,...,M.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula 
+\[
+a_{\alpha}=\frac{1}{c_{\alpha}}\left\{ \overset{M}{\underset{j=0}{\sum}}W_{j}T_{\alpha}(\xi_{j})f(\xi_{j})\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+=\frac{1}{c_{\alpha}}\left\{ \frac{1}{2}T_{\alpha}(\xi_{0})f(\xi_{0})+...+T_{\alpha}(\xi_{M-1})f(\xi_{M-1})+\frac{1}{2}T_{\alpha}(\xi_{M})f(\xi_{M})\right\} ,\label{eq:P2_Eq13}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+c_{\alpha}=\overset{M}{\underset{j=0}{\sum}}W_{j}T_{\alpha}^{2}(\xi_{j})=\left\{ \frac{1}{2}T_{\alpha}^{2}(\xi_{0})+T_{\alpha}^{2}(\xi_{1})+...+T_{\alpha}^{2}(\xi_{M-1})+\frac{1}{2}T_{\alpha}^{2}(\xi_{M})\right\} ,\:\alpha=0,1,...,N,\label{eq:P2_Eq14}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{array}{ccc}
+c_{0} & =\langle T_{0}(\xi),T_{0}(\xi)\rangle=M\\
+c_{\alpha} & =\langle T_{\alpha}(\xi),T_{\alpha}(\xi)\rangle=M/2, & \alpha=1,2,...,N-1\\
+c_{_{N}} & =\langle T_{N}(\xi),T_{N}(\xi)\rangle=M, & \mathrm{if}\:M=N\:(\mathrm{interpolation\:case})\\
+c_{_{N}} & =\langle T_{N}(\xi),T_{N}(\xi)\rangle=M/2, & \mathrm{if}\:M>N\:(\mathrm{least\:squares\:case})
+\end{array}\right\} .\label{eq:P1_Eq15}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Weight Matrix
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\left(\Phi^{T}W\Phi\right)^{-1}=diag\left\{ 1/\left(\Phi^{T}W\Phi\right)_{ii}\right\} \equiv diag\left\{ \begin{array}{cccc}
+1/m_{00} & 1/m_{11} & \cdots & 1/m_{NN}\end{array}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $m_{\alpha\beta}=m_{\beta\alpha}\equiv\langle\phi_{\alpha}(\xi),\phi_{\beta}(\xi)\rangle\equiv\overset{M}{\underset{j=0}{\sum}}W_{j}\phi_{\alpha}(\xi_{j})\phi_{\beta}(\xi_{j})=\left\{ \begin{array}{c}
+0,\:for\:\alpha\neq\beta\\
+m_{\alpha\alpha}=c_{\alpha}>0,\:for\:\alpha=\beta
+\end{array}\right\} ,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $m_{\alpha\beta}=\left[\begin{array}{ccc}
+m_{00} & m_{01} & m_{02}\\
+m_{10} & m_{11} & m_{12}\\
+m_{20} & m_{21} & m_{22}
+\end{array}\right]=\left(\Phi^{T}W\Phi\right),$
+\end_inset
+
+
+\begin_inset Formula $\left(\Phi^{T}W\Phi\right)=\left[\begin{array}{ccc}
+\phi_{0}(\xi_{0}) & \phi_{0}(\xi_{1}) & \phi_{0}(\xi_{2})\\
+\phi_{1}(\xi_{0}) & \phi_{1}(\xi_{1}) & \phi_{1}(\xi_{2})\\
+\phi_{2}(\xi_{0}) & \phi_{2}(\xi_{1}) & \phi_{2}(\xi_{2})
+\end{array}\right]\left[\begin{array}{ccc}
+W_{0} & 0 & 0\\
+0 & W_{1} & 0\\
+0 & 0 & W_{2}
+\end{array}\right]\left[\begin{array}{ccc}
+\phi_{0}(\xi_{0}) & \phi_{1}(\xi_{0}) & \phi_{2}(\xi_{0})\\
+\phi_{0}(\xi_{1}) & \phi_{1}(\xi_{1}) & \phi_{2}(\xi_{1})\\
+\phi_{0}(\xi_{2}) & \phi_{1}(\xi_{2}) & \phi_{2}(\xi_{2})
+\end{array}\right].$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+m_{00}=W_{0}\phi_{0}^{2}(\xi_{0})+W_{1}\phi_{0}^{2}(\xi_{1})+W_{2}\phi_{0}^{2}(\xi_{2}),\\
+m_{11}=W_{0}\phi_{1}^{2}(\xi_{0})+W_{1}\phi_{1}^{2}(\xi_{1})+W_{2}\phi_{1}^{2}(\xi_{2}),\\
+m_{22}=W_{0}\phi_{2}^{2}(\xi_{0})+W_{1}\phi_{2}^{2}(\xi_{1})+W_{2}\phi_{2}^{2}(\xi_{2}),\\
+m_{01}=m_{10}=W_{0}\phi_{0}(\xi_{0})\phi_{1}(\xi_{0})+W_{0}\phi_{0}(\xi_{0})\phi_{1}(\xi_{0})+W_{2}\phi_{0}(\xi_{2})\phi_{1}(\xi_{2}),\\
+m_{02}=m_{20}=W_{0}\phi_{0}(\xi_{0})\phi_{2}(\xi_{0})+W_{1}\phi_{0}(\xi_{1})\phi_{2}(\xi_{1})+W_{2}\phi_{0}(\xi_{2})\phi_{2}(\xi_{2}),\\
+m_{12}=m_{21}=W_{0}\phi_{1}(\xi_{0})\phi_{2}(\xi_{0})+W_{1}\phi_{1}(\xi_{1})\phi_{2}(\xi_{1})+W_{2}\phi_{1}(\xi_{2})\phi_{2}(\xi_{2}).
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Why Half?
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\phi_{k}(\xi_{j})=\cos(k\,\arccos(\xi_{j})),\:\xi\in[-1,1],$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\phi_{\alpha}(\xi)=\cos\left(\alpha x\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\phi_{\beta}(\xi)=\cos\left(\beta x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $x_{j}=arccos(\xi_{j})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\xi_{j}=-cos\left(\frac{i\pi}{M}\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $x=\arccos\left(\xi_{j}\right)=\arccos\left(-cos\left(\frac{i\pi}{M}\right)\right)=\frac{(M\pi-j\pi)}{M}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\cos\left(\alpha x\right)\cos\left(\beta x\right)=\frac{1}{2}\left(\cos\left(\left(\alpha+\beta\right)x\right)+\cos\left(\left(\alpha-\beta\right)x\right)\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\overset{M}{\underset{j=0}{\sum}}\phi_{\alpha}(\xi_{j})\phi_{\beta}(\xi_{j})=\overset{M}{\underset{j=0}{\sum}}\frac{1}{2}\left(\cos\left(\left(\alpha+\beta\right)x_{j}\right)+\cos\left(\left(\alpha-\beta\right)x_{j}\right)\right),$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\overset{3}{\underset{j=0}{\sum}}\phi_{2}(\xi_{j})\phi_{3}(\xi_{j})=\frac{1}{2}\left(\cos\left(\left(2+3\right)x_{0}\right)+\cos\left(\left(2-3\right)x_{0}\right)+...\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $...+\cos\left(\left(2+3\right)x_{1}\right)+\cos\left(\left(2-3\right)x_{1}\right)+...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $...+\cos\left(\left(2+3\right)x_{2}\right)+\cos\left(\left(2-3\right)x_{2}\right)+...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\left.+\cos\left(\left(2+3\right)x_{3}\right)+\cos\left(\left(2-3\right)x_{3}\right)\right),$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\overset{3}{\underset{j=0}{\sum}}\phi_{2}(\xi_{j})\phi_{3}(\xi_{j})=\frac{1}{2}\left(\cos\overset{}{\underset{{\color{red}=0}}{\underbrace{\left((2+3)\frac{(3\pi-0\pi)}{3}\right)}}}+\cos\overset{}{\underset{=0}{\underbrace{\left((2-3)\frac{(3\pi-0\pi)}{3}\right)}}}+...\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $...+\cos\overset{}{\underset{{\color{red}=\frac{10\pi}{3}\equiv\theta_{1}}}{\underbrace{\left((2+3)\frac{(3\pi-\pi)}{3}\right)}}}+\cos\overset{}{\underset{=-\frac{2\pi}{3}\equiv\theta_{2}}{\underbrace{\left((2-3)\frac{(3\pi-\pi)}{3}\right)}}}+...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $...+\cos\overset{}{\underset{{\color{red}=\frac{5\pi}{3}=2\theta_{1}}}{\underbrace{\left((2+3)\frac{(3\pi-2\pi)}{3}\right)}}}+\cos\overset{}{\underset{=-\frac{\pi}{3}=2\theta_{2}}{\underbrace{\left((2-3)\frac{(3\pi-2\pi)}{3}\right)}}}+...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\left....+\cos\overset{}{\underset{{\color{red}=5\pi=3\theta_{1}}}{\underbrace{\left((2+3)\frac{(3\pi-3\pi)}{3}\right)}}}+\cos\overset{}{\underset{=-\pi=3\theta_{2}}{\underbrace{\left((2-3)\frac{(3\pi-3\pi)}{3}\right)}}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula $\frac{1}{2}+cos\left(\theta\right)+cos\left(2\theta\right)+...+cos\left(\left(M-1\right)\theta\right)+\frac{1}{2}cos\left(M\theta\right)=\frac{1}{2}sin\left(M\theta\right)cot\left(\frac{1}{2}\theta\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Formula ${\color{red}\frac{1}{2}}+\frac{1}{2}+{\color{red}\cos\theta_{1}}+\cos\theta_{2}+{\color{red}\cos2\theta_{1}}+\cos2\theta_{2}+{\color{red}\frac{1}{2}\cos3\theta_{1}}+\frac{1}{2}\cos3\theta_{2}=0.$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
